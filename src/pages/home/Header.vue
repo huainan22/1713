@@ -1,25 +1,21 @@
 <template>
     <div class="header">
-    	<a class="header-left"> < </a>
+    	<a class="header-left"> <i class="iconfont icon-fanhui"></i> </a>
+
     	<div class="header-title">
-    		<span class="single-line">输入城市/景点/游玩主题</span>  		
+    		<i class="iconfont icon-fangdajing"></i>
+    			输入城市/景点/游玩主题 		
     	</div>
-    	<div class="header-right" mp-role="right">
+    	<div class="header-right">
     		<span class="nav-city">北京</span>
-    		<span class="trangle-down"></span>
     	</div>
    	</div>
 </template>
 
 <script>
-export default {
-  name: 'Header',
-  data () {
-    return {
-      msg: 'header'
-    }
-  }
-}
+	export default {
+	  
+	}
 </script>
 
 
@@ -56,14 +52,26 @@ export default {
 		width: 1.28rem;
 		line-height: .88rem;
 	}
-	.trangle-down {
-		float:right;
-		margin-right:.2rem;
-		margin-top: .35rem;
-		width: 0;
-		height: 0;
-		border-left: .12rem solid transparent;
-		border-right: .12rem solid transparent;
-		border-top: .2rem solid #fff;
+	.nav-city{
+		float:left;
+		width:.85rem;
+		overflow:hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;	
 	}
+	.nav-city:after {
+		position: absolute;
+		top: .35rem;
+	    right: .13rem; 
+	    width: 0;
+	    content: "";
+		border-left: .15rem solid transparent;  
+	    border-right: .15rem solid transparent;  
+	    border-top: .155rem solid #fff;      
+	}
+	
+	/*.icon-fangdajing{
+		color:#000;
+		font-size:.3rem;
+	}*/
 </style>
