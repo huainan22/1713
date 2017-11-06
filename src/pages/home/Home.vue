@@ -3,7 +3,7 @@
         <index-header />
         <index-swiper />
         <index-swiper :swiperInfo="swiperInfo"/>
-        <index-icon-swiper :indexIconSwiperInfo="indexIconSwiperInfo" />
+        <index-icon-swiper />
         <index-address />
         <index-hotlist />
         <index-weekendList />
@@ -40,7 +40,7 @@
         methods: {
 
             getHomeData() {
-                axios.get('../../../static/index.json')
+                axios.get('../../../static/index.json?city=北京')
                   .then(this.handleGetDataSucc.bind(this))
                   .catch(this.handleGetDataError.bind(this));
             },
