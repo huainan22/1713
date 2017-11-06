@@ -1,7 +1,6 @@
 <template>
     <div>
         <index-header />
-        <index-swiper />
         <index-swiper :swiperInfo="swiperInfo"/>
         <index-icon-swiper />
         <index-address />
